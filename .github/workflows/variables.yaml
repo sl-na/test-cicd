@@ -1,0 +1,9 @@
+name: Variables    # ワークフロー名
+on: push    # イベント（プッシュ時に起動）
+jobs:    # ジョブの定義
+  print:    # ジョブID
+    runs-on: ubuntu-latest    # ランナー（Ubuntuで実行）
+    env:    # 環境変数の定義
+      USERNAME: ${{ vars.USERNAME }}    # 環境変数
+    steps:    # ステップの定義
+      - run: echo "${USERNAME}"    # 環境変数の出力  
