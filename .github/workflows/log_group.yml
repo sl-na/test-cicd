@@ -3,6 +3,7 @@ on: push
 jobs:
   log:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
       - run: |
           echo "::group::Show enviroment variables"
