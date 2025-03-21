@@ -1,0 +1,16 @@
+name: Parallel jobs
+on: push
+jobs:
+  timeout-minutes: 5
+  first:
+    runs-on: ubuntu-latest
+    steps:
+      - run: sleep 10 && echo "First job"
+  second:
+    runs-on: ubuntu-latest
+    steps:
+      - run: sleep 10 && echo "Second job"
+  third:
+    runs-on: ubuntu-latest
+    steps:
+      - run: sleep 10 && echo "Third job"
